@@ -37,6 +37,7 @@ export class App extends Component {
         contacts: [contact, ...prevState.contacts],
       }));
     }
+    return alert(`${name} is already in contacts`)
   };
 
   changeFilter = evt => {
