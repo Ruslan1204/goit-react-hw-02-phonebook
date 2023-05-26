@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
-import css from '../ContactList/ContactList.module.css'
+import css from '../ContactList/ContactList.module.css';
+import { ContactItem } from '../ContactItem/ContactItem';
 
 export const ContactList = ({ contacts, onDelete }) => {
   return (
@@ -9,13 +10,13 @@ export const ContactList = ({ contacts, onDelete }) => {
           onDelete(id);
         };
         return (
-          <li className={css.item} key={id} >
-            <p>{name}</p>
-            <p>{number}</p>
-            <button type="button" onClick={handleDeleteContact}>
-              Delete
-            </button>
-          </li>
+          <ContactItem
+            key={id}
+            id={id}
+            name={name}
+            number={number}
+            onDelete={handleDeleteContact}
+          />
         );
       })}
     </ul>
@@ -24,5 +25,5 @@ export const ContactList = ({ contacts, onDelete }) => {
 
 ContactList.propTypes = {
   contacts: PropTypes.array.isRequired,
-  onDelete: PropTypes.func,
-}
+  onDelete: PropTypes.func.isRequired,
+};

@@ -36,8 +36,9 @@ export class App extends Component {
       this.setState(prevState => ({
         contacts: [contact, ...prevState.contacts],
       }));
+    } else{
+      return alert(`${name} is already in contacts.`)
     }
-    return alert(`${name} is already in contacts.`)
   };
 
   changeFilter = evt => {
