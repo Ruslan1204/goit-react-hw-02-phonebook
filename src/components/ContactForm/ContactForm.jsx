@@ -27,7 +27,7 @@ export class ContactForm extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <label htmlFor="Name">
+          <label>
             <p>Name</p>
             <input
               onChange={this.handleChangeForm}
@@ -40,7 +40,7 @@ export class ContactForm extends Component {
             />
           </label>
 
-          <label htmlFor="Name">
+          <label>
             <p>Number</p>
             <input
               onChange={this.handleChangeForm}
