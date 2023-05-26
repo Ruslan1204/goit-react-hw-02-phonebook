@@ -61,6 +61,6 @@ export class ContactForm extends Component {
 }
 
 ContactForm.propTypes={
-  name: PropTypes.string, 
-  number:PropTypes.string,
+  onAdd: PropTypes.func, 
+
 }
